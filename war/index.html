@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- The HTML 4.01 Transitional DOCTYPE declaration-->
+<!-- above set at the top of the file will set     -->
+<!-- the browser's rendering engine into           -->
+<!-- "Quirks Mode". Replacing this declaration     -->
+<!-- with a "Standards Mode" doctype is supported, -->
+<!-- but may lead to some differences in layout.   -->
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Практическое задание 3.1</title>
+  </head>
+	<script src="jquery-2.1.0.min.js"></script>
+	<script>
+	$(function(){
+		$('#send').click(function(){
+			var var1=$('#first').val();
+			var var2=$('#two').val();
+			$('#result').load("/project301?var3="+var1+"&var4="+var2);
+			
+		}
+				);
+	}
+			);
+	</script>
+  <body>
+    <h1>Вывесте ближайшее число к 10</h1>
+	
+    <table>
+      <tr>
+        <td>Первое число</td>
+        <td><input id="first" type="text"> </td>        
+      </tr>
+      
+      <tr>
+      	<td>Второе число</td>
+      	<td><input id="two" type="text"></td>
+      </tr>
+      
+      <tr> 
+      <td> <input id="send" type="submit"></td> 
+      <td><p>Результат: <b><span style="color:red" id="result"></span></b></p></td>
+      </tr>
+    </table>
+  </body>
+</html>
